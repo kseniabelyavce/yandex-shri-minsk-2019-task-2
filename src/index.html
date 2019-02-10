@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Задание 2</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+    <script src="./solution.js"></script>
+    <script>
+      const graph = {
+        start: { A: 50, B: 20 },
+        A: { C: 40, D: 20 },
+        B: { A: 90, D: 90 },
+        C: { D: 160, finish: 50 },
+        D: { finish: 20 },
+        finish: {}
+      };
+      const start = 'start';
+      const finish = 'finish';
+
+      new Finder(solution, graph, start, finish);
+    </script>
+  </body>
+</html>
